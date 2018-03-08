@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="左右">
 <meta property="og:description" content="1234567891011121314151617181920212223# encoding:utf-8import sysimport getoptdef print_info():    print(&apos;Usage,you should input...&apos;)if __name__ == &quot;__main__&quot;:    try:        opts, args = getopt.getopt(">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-08T14:48:29.878Z">
+<meta property="og:updated_time" content="2018-03-08T15:24:51.236Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python从命令行获取参数">
 <meta name="twitter:description" content="1234567891011121314151617181920212223# encoding:utf-8import sysimport getoptdef print_info():    print(&apos;Usage,you should input...&apos;)if __name__ == &quot;__main__&quot;:    try:        opts, args = getopt.getopt(">
@@ -72,7 +72,7 @@
                                     <a class="main-nav-list-link" href="/">主页</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/python/">python</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/日记/">日记</a></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/">Python</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/常用模块/">常用模块</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/日记/">日记</a></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/about/index.html">关于</a>
@@ -131,7 +131,7 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/python/">python</a>
+    <a class="page-title-link" href="/categories/Python/">Python</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Python/常用模块/">常用模块</a>
     </h1>
 </div>
                         <div class="main-body-content">
@@ -168,19 +168,17 @@
         
         <div class="article-entry" itemprop="articleBody">
             <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># encoding:utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> getopt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_info</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'Usage,you should input...'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        opts, args = getopt.getopt(sys.argv[<span class="number">1</span>:], <span class="string">"ho:"</span>, [<span class="string">"help"</span>, <span class="string">"output="</span>])</span><br><span class="line">        print(<span class="string">'opt:%s'</span> % opts)</span><br><span class="line">        print(<span class="string">'args:%s'</span> % args)</span><br><span class="line">        <span class="keyword">for</span> o, v <span class="keyword">in</span> opts:</span><br><span class="line">            <span class="keyword">if</span> o <span class="keyword">in</span> (<span class="string">'-h'</span>, <span class="string">'--help'</span>):</span><br><span class="line">                print(o, v, <span class="string">"help"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">except</span> getopt.GetoptError <span class="keyword">as</span> error:</span><br><span class="line">        print(str(error))</span><br><span class="line">        print_info()</span><br><span class="line">        sys.exit()</span><br></pre></td></tr></table></figure>
-<h5 id="sys-argv-1"><a href="#sys-argv-1" class="headerlink" title="sys.argv[1:]"></a>sys.argv[1:]</h5><pre><code>过滤掉第一个参数
-</code></pre><h5 id="“ho-”-短格式参数"><a href="#“ho-”-短格式参数" class="headerlink" title="“ho:” 短格式参数"></a>“ho:” 短格式参数</h5><pre><code>当参数选项后面不带附加参数时&quot;:&quot;号时，只可以表示开关状态时，比如-h
-当参数选项后面不带附加参数时&quot;:&quot;号时，输入参数后可带参数值，比如-o output
-</code></pre><h5 id="“help”-“output-”-：长格式参数"><a href="#“help”-“output-”-：长格式参数" class="headerlink" title="[“help”, “output=”] ：长格式参数"></a>[“help”, “output=”] ：长格式参数</h5><pre><code>&quot;help&quot;是一个开关选项； --help
-&quot;output=&quot;有等号则表示后面应该带一个参数值，比如 --output args
-</code></pre><h5 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ python test.py -h -o o_args --help --output our_args args1 args2</span><br><span class="line">opt:[(<span class="string">'-h'</span>, <span class="string">''</span>), (<span class="string">'-o'</span>, <span class="string">'o_args'</span>), (<span class="string">'--help'</span>, <span class="string">''</span>), (<span class="string">'--output'</span>, <span class="string">'our_args'</span>)]</span><br><span class="line">args:[<span class="string">'args1'</span>, <span class="string">'args2'</span>]</span><br><span class="line">(<span class="string">'-h'</span>, <span class="string">''</span>, <span class="string">'help'</span>)</span><br><span class="line">(<span class="string">'--help'</span>, <span class="string">''</span>, <span class="string">'help'</span>)</span><br></pre></td></tr></table></figure>
+<h5 id="sys-argv-1"><a href="#sys-argv-1" class="headerlink" title="sys.argv[1:]"></a>sys.argv[1:]</h5><p> 过滤掉第一个参数</p>
+<h5 id="“ho-”-短格式参数"><a href="#“ho-”-短格式参数" class="headerlink" title="“ho:” 短格式参数"></a>“ho:” 短格式参数</h5><p> 当参数选项后面不带附加参数时”:”号时，只可以表示开关状态时，比如-h<br> 当参数选项后面不带附加参数时”:”号时，输入参数后可带参数值，比如-o output</p>
+<h5 id="“help”-“output-”-：长格式参数"><a href="#“help”-“output-”-：长格式参数" class="headerlink" title="[“help”, “output=”] ：长格式参数"></a>[“help”, “output=”] ：长格式参数</h5><p> “help”是一个开关选项； –help<br> “output=”有等号则表示后面应该带一个参数值，比如 –output args</p>
+<h5 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ python test.py -h -o o_args --help --output our_args args1 args2</span><br><span class="line">opt:[(<span class="string">'-h'</span>, <span class="string">''</span>), (<span class="string">'-o'</span>, <span class="string">'o_args'</span>), (<span class="string">'--help'</span>, <span class="string">''</span>), (<span class="string">'--output'</span>, <span class="string">'our_args'</span>)]</span><br><span class="line">args:[<span class="string">'args1'</span>, <span class="string">'args2'</span>]</span><br><span class="line">(<span class="string">'-h'</span>, <span class="string">''</span>, <span class="string">'help'</span>)</span><br><span class="line">(<span class="string">'--help'</span>, <span class="string">''</span>, <span class="string">'help'</span>)</span><br></pre></td></tr></table></figure>
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://yoursite.com/2018/03/08/Python从命令行获取参数/" data-id="cjeimnp0100002gedaao29nh2" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2018/03/08/Python从命令行获取参数/" data-id="cjeimopdr0000d0ed3vx4krg6" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -310,7 +308,7 @@
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/python/">python</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/Python/">Python</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Python/常用模块/">常用模块</a></p>
                             <p class="item-title"><a href="/2018/03/08/Python从命令行获取参数/" class="title">Python从命令行获取参数</a></p>
                             <p class="item-date"><time datetime="2018-03-08T13:55:50.000Z" itemprop="datePublished">2018-03-08</time></p>
                         </div>
@@ -345,7 +343,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/日记/">日记</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Python/常用模块/">常用模块</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/日记/">日记</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 

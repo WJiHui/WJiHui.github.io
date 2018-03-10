@@ -3,24 +3,24 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Python从命令行获取参数 | 左右</title>
+    <title>列表排序 | 左右</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="getopt" />
+        <meta name="keywords" content="sort,List" />
     
-    <meta name="description" content="1234567891011121314151617181920212223# encoding:utf-8import sysimport getoptdef print_info():    print(&apos;Usage,you should input...&apos;)if __name__ == &quot;__main__&quot;:    try:        opts, args = getopt.getopt(">
-<meta name="keywords" content="getopt">
+    <meta name="description" content="冒泡排序1234567891011121314def bubble_sort():    # 从左向右，如果相邻的两个数，前面的数比后面的数大，就互换位置    for i in range(test_list_len):        for j in range(test_list_len-i-1):            if test_list[j] &amp;gt; test_list[j+1]">
+<meta name="keywords" content="sort,List">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python从命令行获取参数">
-<meta property="og:url" content="http://yoursite.com/2018/03/08/Python从命令行获取参数/index.html">
+<meta property="og:title" content="列表排序">
+<meta property="og:url" content="http://yoursite.com/2018/03/10/列表排序/index.html">
 <meta property="og:site_name" content="左右">
-<meta property="og:description" content="1234567891011121314151617181920212223# encoding:utf-8import sysimport getoptdef print_info():    print(&apos;Usage,you should input...&apos;)if __name__ == &quot;__main__&quot;:    try:        opts, args = getopt.getopt(">
+<meta property="og:description" content="冒泡排序1234567891011121314def bubble_sort():    # 从左向右，如果相邻的两个数，前面的数比后面的数大，就互换位置    for i in range(test_list_len):        for j in range(test_list_len-i-1):            if test_list[j] &amp;gt; test_list[j+1]">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-09T15:57:17.059Z">
+<meta property="og:updated_time" content="2018-03-10T15:24:51.988Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python从命令行获取参数">
-<meta name="twitter:description" content="1234567891011121314151617181920212223# encoding:utf-8import sysimport getoptdef print_info():    print(&apos;Usage,you should input...&apos;)if __name__ == &quot;__main__&quot;:    try:        opts, args = getopt.getopt(">
+<meta name="twitter:title" content="列表排序">
+<meta name="twitter:description" content="冒泡排序1234567891011121314def bubble_sort():    # 从左向右，如果相邻的两个数，前面的数比后面的数大，就互换位置    for i in range(test_list_len):        for j in range(test_list_len-i-1):            if test_list[j] &amp;gt; test_list[j+1]">
     
 
     
@@ -131,18 +131,18 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/Python/">Python</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Python/Python-Package/">Python Package</a>
+    <a class="page-title-link" href="/categories/Python/">Python</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Python/DataStructure-Algorithm/">DataStructure&Algorithm</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-Python从命令行获取参数" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-列表排序" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Python从命令行获取参数
+        列表排序
         </h1>
     
 
@@ -152,33 +152,35 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2018/03/08/Python从命令行获取参数/" class="article-date">
-            <time datetime="2018-03-08T13:55:50.000Z" itemprop="datePublished">2018-03-08</time>
+        <a href="/2018/03/10/列表排序/" class="article-date">
+            <time datetime="2018-03-10T08:41:18.000Z" itemprop="datePublished">2018-03-10</time>
         </a>
     </div>
 
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/getopt/">getopt</a>
+        <a class="tag-link" href="/tags/List/">List</a>, <a class="tag-link" href="/tags/sort/">sort</a>
     </div>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># encoding:utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> getopt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_info</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'Usage,you should input...'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        opts, args = getopt.getopt(sys.argv[<span class="number">1</span>:], <span class="string">"ho:"</span>, [<span class="string">"help"</span>, <span class="string">"output="</span>])</span><br><span class="line">        print(<span class="string">'opt:%s'</span> % opts)</span><br><span class="line">        print(<span class="string">'args:%s'</span> % args)</span><br><span class="line">        <span class="keyword">for</span> o, v <span class="keyword">in</span> opts:</span><br><span class="line">            <span class="keyword">if</span> o <span class="keyword">in</span> (<span class="string">'-h'</span>, <span class="string">'--help'</span>):</span><br><span class="line">                print(o, v, <span class="string">"help"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">except</span> getopt.GetoptError <span class="keyword">as</span> error:</span><br><span class="line">        print(str(error))</span><br><span class="line">        print_info()</span><br><span class="line">        sys.exit()</span><br></pre></td></tr></table></figure>
-<h5 id="sys-argv-1"><a href="#sys-argv-1" class="headerlink" title="sys.argv[1:]"></a>sys.argv[1:]</h5><p> 过滤掉第一个参数</p>
-<h5 id="“ho-”-短格式参数"><a href="#“ho-”-短格式参数" class="headerlink" title="“ho:” 短格式参数"></a>“ho:” 短格式参数</h5><p> 当参数选项后面不带附加参数时”:”号时，只可以表示开关状态时，比如-h<br> 当参数选项后面不带附加参数时”:”号时，输入参数后可带参数值，比如-o output</p>
-<h5 id="“help”-“output-”-：长格式参数"><a href="#“help”-“output-”-：长格式参数" class="headerlink" title="[“help”, “output=”] ：长格式参数"></a>[“help”, “output=”] ：长格式参数</h5><p> “help”是一个开关选项； –help<br> “output=”有等号则表示后面应该带一个参数值，比如 –output args</p>
-<h5 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ python test.py -h -o o_args --help --output our_args args1 args2</span><br><span class="line">opt:[(<span class="string">'-h'</span>, <span class="string">''</span>), (<span class="string">'-o'</span>, <span class="string">'o_args'</span>), (<span class="string">'--help'</span>, <span class="string">''</span>), (<span class="string">'--output'</span>, <span class="string">'our_args'</span>)]</span><br><span class="line">args:[<span class="string">'args1'</span>, <span class="string">'args2'</span>]</span><br><span class="line">(<span class="string">'-h'</span>, <span class="string">''</span>, <span class="string">'help'</span>)</span><br><span class="line">(<span class="string">'--help'</span>, <span class="string">''</span>, <span class="string">'help'</span>)</span><br></pre></td></tr></table></figure>
+            <h4 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bubble_sort</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 从左向右，如果相邻的两个数，前面的数比后面的数大，就互换位置</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(test_list_len):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(test_list_len-i<span class="number">-1</span>):</span><br><span class="line">            <span class="keyword">if</span> test_list[j] &gt; test_list[j+<span class="number">1</span>]:</span><br><span class="line">                test_list[j], test_list[j+<span class="number">1</span>] = test_list[j+<span class="number">1</span>], test_list[j]</span><br><span class="line">    <span class="keyword">return</span> test_list</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    test_list = [<span class="number">1</span>, <span class="number">34</span>, <span class="number">22</span>, <span class="number">45</span>, <span class="number">11</span>, <span class="number">99</span>, <span class="number">0</span>, <span class="number">8</span>, <span class="number">2</span>]</span><br><span class="line">    test_list_len = len(test_list)</span><br><span class="line">    test_list = bubble_sort()</span><br><span class="line">    print(test_list)</span><br></pre></td></tr></table></figure>
+<h4 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">select_sort</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 每次循环选择剩下的数列中最小的一个排到前面去</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(test_list_len):</span><br><span class="line">        min_index = i</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(i + <span class="number">1</span>, test_list_len):</span><br><span class="line">            <span class="keyword">if</span> test_list[min_index] &gt; test_list[j]:</span><br><span class="line">                min_index = j</span><br><span class="line">        test_list[i], test_list[min_index] = test_list[min_index], test_list[i]</span><br><span class="line">    <span class="keyword">return</span> test_list</span><br></pre></td></tr></table></figure>
+<h4 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">insert_sort</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 将一个数插入到前面的有序数组中</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, test_list_len):</span><br><span class="line">        value = test_list[i]</span><br><span class="line">        j = i - <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> j &gt;= <span class="number">0</span> <span class="keyword">and</span> test_list[j] &gt; value:</span><br><span class="line">            <span class="comment"># 前面的数比后面的数大，后面的数赋值前一个，</span></span><br><span class="line">            test_list[j + <span class="number">1</span>] = test_list[j]</span><br><span class="line">            j -= <span class="number">1</span>                <span class="comment"># 向前推</span></span><br><span class="line">        test_list[j + <span class="number">1</span>] = value  <span class="comment"># 把最小的值赋值给检查到的最左边</span></span><br><span class="line">    <span class="keyword">return</span> test_list</span><br></pre></td></tr></table></figure>
+<h4 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">quick_sort</span><span class="params">(lists, start, end)</span>:</span></span><br><span class="line">    <span class="comment"># 在一组数列中选择一个元素，按照这个元素把这个数列分成两个数列，一组数列比另一个数列的所有元素都小，</span></span><br><span class="line">    <span class="comment"># 再继续按照这种方法递归排序</span></span><br><span class="line">    <span class="keyword">if</span> start &lt; end:</span><br><span class="line">        low, high = start, end</span><br><span class="line">        <span class="comment"># 比较基准</span></span><br><span class="line">        key = lists[low]</span><br><span class="line">        <span class="keyword">while</span> low &lt; high:</span><br><span class="line">            <span class="comment"># 如果列表后边的数,大于等于基准数,则前移一位直到有比基准数小的数出现</span></span><br><span class="line">            <span class="keyword">while</span> (low &lt; high) <span class="keyword">and</span> (lists[high] &gt;= key):</span><br><span class="line">                high -= <span class="number">1</span></span><br><span class="line">            <span class="comment"># 如找到,则把第high个元素赋值给第个元素low,此时表中low,high个元素相等</span></span><br><span class="line">            lists[low] = lists[high]</span><br><span class="line">            <span class="comment"># 同样的方式比较前半区</span></span><br><span class="line">            <span class="keyword">while</span> (low &lt; high) <span class="keyword">and</span> (lists[low] &lt;= key):</span><br><span class="line">                low += <span class="number">1</span></span><br><span class="line">            lists[high] = lists[low]</span><br><span class="line">        <span class="comment"># 重新设置比较基准</span></span><br><span class="line">        lists[low] = key</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 递归前后半区</span></span><br><span class="line">        quick_sort(lists, start, low - <span class="number">1</span>)</span><br><span class="line">        quick_sort(lists, high + <span class="number">1</span>, end)</span><br><span class="line">    <span class="keyword">return</span> lists</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    test_list = [<span class="number">1</span>, <span class="number">34</span>, <span class="number">22</span>, <span class="number">45</span>, <span class="number">11</span>, <span class="number">99</span>, <span class="number">0</span>, <span class="number">8</span>, <span class="number">2</span>]</span><br><span class="line">    test_list_len = len(test_list)</span><br><span class="line">    test_list = quick_sort(test_list, <span class="number">0</span>, len(test_list) - <span class="number">1</span>)</span><br><span class="line">    print(test_list)</span><br></pre></td></tr></table></figure>
+<h4 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">merge_sort</span><span class="params">(lists)</span>:</span></span><br><span class="line">    <span class="comment"># 归并排序，将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。</span></span><br><span class="line">    <span class="comment"># 若将两个有序表合并成一个有序表，称为二路归并。</span></span><br><span class="line">    <span class="comment"># 先把数列[1, 34, 22, 45, 11, 99, 0, 8, 2]分成单一个数字[1] [34]。。。然后两个合并[1, 34]</span></span><br><span class="line">    <span class="comment"># 两两合并[1, 22, 34, 45]，再合并[0, 1, 2, 8, 11, 22, 34, 45, 99]</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">merge</span><span class="params">(left, right)</span>:</span></span><br><span class="line">        result = []</span><br><span class="line">        <span class="keyword">while</span> len(left) &gt; <span class="number">0</span> <span class="keyword">and</span> len(right) &gt; <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">if</span> left[<span class="number">0</span>] &gt; right[<span class="number">0</span>]:</span><br><span class="line">                result.append(right.pop(<span class="number">0</span>))</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                result.append(left.pop(<span class="number">0</span>))</span><br><span class="line">        result.extend(left+right)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> len(lists) &lt;= <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> lists</span><br><span class="line">    num = len(lists) / <span class="number">2</span></span><br><span class="line">    left = merge_sort(lists[:num])</span><br><span class="line">    right = merge_sort(lists[num:])</span><br><span class="line">    <span class="keyword">return</span> merge(left, right)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    test_list = [<span class="number">1</span>, <span class="number">34</span>, <span class="number">22</span>, <span class="number">45</span>, <span class="number">11</span>, <span class="number">99</span>, <span class="number">0</span>, <span class="number">8</span>, <span class="number">2</span>]</span><br><span class="line">    test_list = merge_sort(test_list)</span><br><span class="line">    print(test_list)</span><br></pre></td></tr></table></figure>
+<p> 二路归并有一个简单的方法<br> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">import</span> heapq</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">merge_sort</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># a b 已经是有序的</span></span><br><span class="line">    a = [<span class="number">5</span>,<span class="number">8</span>,<span class="number">10</span>,<span class="number">118</span>]</span><br><span class="line">    b = [<span class="number">2</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">11</span>]</span><br><span class="line">    <span class="keyword">print</span> list(heapq.merge(a,b))</span><br></pre></td></tr></table></figure></p>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="http://yoursite.com/2018/03/08/Python从命令行获取参数/" data-id="cjel4vmr00000q8ed7wz5n032" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2018/03/10/列表排序/" data-id="cjel4vmrf0002q8edt5n7z8oa" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -275,20 +277,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2018/03/10/字典排序/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">下一篇</strong>
-        <p class="article-nav-title">
-        
-            字典排序
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2018/01/01/新年伊始/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2018/03/10/字典排序/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">新年伊始</p>
+        <p class="article-nav-title">字典排序</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -471,7 +463,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://yoursite.com/2018/03/08/Python从命令行获取参数/';
+    var disqus_url = 'http://yoursite.com/2018/03/10/列表排序/';
     
     (function() {
     var dsq = document.createElement('script');
